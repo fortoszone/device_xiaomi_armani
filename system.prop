@@ -48,3 +48,5 @@ ro.telephony.call_ring.multiple=false
 cm.updater.uri=http://ota.randomdroids.com/api
 ro.product.device=armani
 ro.product.model=armani
+
+qemu.hw.mainkeys=0
