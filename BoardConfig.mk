@@ -154,3 +154,24 @@ TARGET_USES_QCOM_WCNSS_QMI := true
 
 # inherit from the proprietary version
 -include vendor/xiaomi/armani/BoardConfigVendor.mk
+
+#RR Optimizations
+TARGET_TC_ROM := 4.8-linaro
+
+TARGET_TC_KERNEL := 5.1-linaro
+
+RROPTI := true
+
+RR_O3 := true
+
+RR_STRICT := false
+
+RR_GRAPHITE := true
+
+RR_KRAIT := true
+
+RR_PIPE := true
+
+RR_GCC_VERSION_EXP := $(TARGET_TC_ROM)
+
+RR_KERNEL_CUSTOM_TOOLCHAIN := $(TARGET_TC_KERNEL)
