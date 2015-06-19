@@ -164,11 +164,7 @@ RROPTI := true
 
 RR_O3 := true
 
-RR_STRICT := false
-
 RR_GRAPHITE := true
-
-RR_KRAIT := true
 
 RR_PIPE := true
 
