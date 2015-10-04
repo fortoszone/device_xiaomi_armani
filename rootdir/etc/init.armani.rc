@@ -335,8 +335,7 @@ service time_daemon /system/bin/time_daemon
     user root
     group root
 
-service mpdecision /system/bin/mpdecision --no_sleep --avg_comp
-    class main
+service mpdecision /system/bin/mpdecision --avg_comp
     user root
     group root system
     disabled
@@ -393,9 +392,6 @@ on property:sys.boot_completed=1
     write /sys/devices/system/cpu/cpu2/online 1
     write /sys/devices/system/cpu/cpu3/online 1
 
-on property:init.svc.bootanim=stopped
-    # Switch to FIOPS and balanced mode after boot for better UX
-    write /sys/block/mmcblk0/queue/scheduler fiops
     write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor ondemand
     write /sys/devices/system/cpu/cpu1/cpufreq/scaling_governor ondemand
     write /sys/devices/system/cpu/cpu2/cpufreq/scaling_governor ondemand
@@ -406,8 +402,8 @@ on property:init.svc.bootanim=stopped
     write /sys/devices/system/cpu/cpufreq/ondemand/sampling_down_factor 2
     write /sys/devices/system/cpu/cpufreq/ondemand/down_differential 10
     write /sys/devices/system/cpu/cpufreq/ondemand/up_threshold_multi_core 70
-    write /sys/devices/system/cpu/cpufreq/ondemand/down_differential_multi_core 3
-    write /sys/devices/system/cpu/cpufreq/ondemand/optimal_freq 300000
+    write /sys/devices/system/cpu/cpufreq/ondemand/down_differential_multi_core 10
+    write /sys/devices/system/cpu/cpufreq/ondemand/optimal_freq 787200
     write /sys/devices/system/cpu/cpufreq/ondemand/sync_freq 300000
     write /sys/devices/system/cpu/cpufreq/ondemand/up_threshold_any_cpu_load 80
     start mpdecision

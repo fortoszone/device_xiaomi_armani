@@ -30,6 +30,10 @@ PRODUCT_PACKAGES += \
     com.dsi.ant.antradio_library \
     libantradio
 
+# Art
+PRODUCT_PROPERTY_OVERRIDES += \
+    dalvik.vm.dex2oat-flags=--no-watch-dog
+
 # Audio
 PRODUCT_PACKAGES += \
     audiod \
@@ -113,6 +117,10 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.gps.agps_provider=1
+
+# IO Scheduler
+PRODUCT_PROPERTY_OVERRIDES += \
+    sys.io.scheduler=bfq
 
 # IPC router
 PRODUCT_COPY_FILES += \
