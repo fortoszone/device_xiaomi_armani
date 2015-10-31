@@ -67,6 +67,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     camera2.portability.force_api=1
 
 PRODUCT_PACKAGES += \
+    camera.msm8226 \
     libxml2
 
 # Charger
@@ -117,10 +118,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.gps.agps_provider=1
-
-# IO Scheduler
-PRODUCT_PROPERTY_OVERRIDES += \
-    sys.io.scheduler=bfq
 
 # IPC router
 PRODUCT_COPY_FILES += \
@@ -225,11 +222,9 @@ PRODUCT_PACKAGES += \
     hostapd_default.conf \
     p2p_supplicant_overlay.conf \
     wpa_supplicant_overlay.conf \
+    WCNSS_cfg.dat \
+    WCNSS_qcom_cfg.ini \
     WCNSS_qcom_wlan_nv.bin
-
-PRODUCT_COPY_FILES += \
-    kernel/xiaomi/armani/drivers/staging/prima/firmware_bin/WCNSS_cfg.dat:system/etc/firmware/wlan/prima/WCNSS_cfg.dat \
-    kernel/xiaomi/armani/drivers/staging/prima/firmware_bin/WCNSS_qcom_cfg.ini:system/etc/firmware/wlan/prima/WCNSS_qcom_cfg.ini
 
 PRODUCT_PACKAGES += \
     dhcpcd.conf \

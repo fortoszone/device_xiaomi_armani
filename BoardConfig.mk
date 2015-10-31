@@ -41,19 +41,8 @@ TARGET_BOOTLOADER_BOARD_NAME := MSM8226
 TARGET_NO_BOOTLOADER := true
 TARGET_NO_RADIOIMAGE := true
 
-# Camera
-COMMON_GLOBAL_CFLAGS += -DNEEDS_VECTORIMPL_SYMBOLS
-BOARD_USES_LEGACY_MMAP := true
-
 # Charger
 BOARD_CHARGER_SHOW_PERCENTAGE := true
-
-# Enable dex-preoptimization to speed up first boot sequence
-ifeq ($(HOST_OS),linux)
-  ifeq ($(WITH_DEXPREOPT),)
-    WITH_DEXPREOPT := true
-  endif
-endif
 
 # Encryption
 TARGET_HW_DISK_ENCRYPTION := true
