@@ -95,15 +95,11 @@ vendor/lib/libchromatix_s5k3h2yx_owt8a01a_snapshot_hd.so
 vendor/lib/libchromatix_s5k3h2yx_owt8a01a_video_hd.so
 vendor/lib/libchromatix_s5k3h2yx_owt8a01a_zsl.so
 
-# Color convertor
-vendor/lib/libI420colorconvert.so
-vendor/lib/libmm-color-convertor.so
-
 # DRM
 bin/qseecomd
-vendor/lib/drm/libdrmprplugin.so
+lib/libdrmdecrypt.so
 vendor/lib/drm/libdrmwvmplugin.so
-vendor/lib/libdrmdecrypt.so
+vendor/lib/mediadrm/libwvdrmengine.so
 vendor/lib/libdrmdiag.so
 vendor/lib/libdrmfs.so
 vendor/lib/libdrmtime.so
@@ -133,7 +129,6 @@ vendor/lib/egl/libGLESv1_CM_adreno.so
 vendor/lib/egl/libGLESv2_adreno.so
 vendor/lib/egl/libq3dtools_adreno.so
 vendor/lib/libadreno_utils.so
-vendor/lib/libbccQTI.so
 vendor/lib/libC2D2.so
 vendor/lib/libc2d30-a3xx.so
 vendor/lib/libCB.so
@@ -144,7 +139,6 @@ vendor/lib/librs_adreno.so
 vendor/lib/librs_adreno_sha1.so
 vendor/lib/libRSDriver_adreno.so
 vendor/lib/libsc-a3xx.so
-vendor/lib/libscale.so
 
 # Keystore
 vendor/firmware/keymaster/keymaster.b00
@@ -155,21 +149,14 @@ vendor/firmware/keymaster/keymaster.mdt
 
 # Media
 vendor/lib/libDivxDrm.so
-vendor/lib/libExtendedExtractor.so
-vendor/lib/libHevcSwDecoder.so
+vendor/lib/libI420colorconvert.so
+vendor/lib/libmm-color-convertor.so
 vendor/lib/libmmosal.so
-vendor/lib/libmmparser.so
-vendor/lib/libOmxAacDec.so
-vendor/lib/libOmxAmrwbplusDec.so
-vendor/lib/libOmxEvrcDec.so
-vendor/lib/libOmxMux.so
-vendor/lib/libOmxQcelp13Dec.so
-vendor/lib/libOmxVdecHevc.so
-vendor/lib/libOmxWmaDec.so
+vendor/lib/libSHIMDivxDrm.so
 
 # Perf
 bin/mpdecision
-vendor/lib/libqc-opt.so
+vendor/lib/libqti-perfd-client.so
 
 # Qualcomm
 bin/irsc_util
