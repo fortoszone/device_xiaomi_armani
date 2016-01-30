@@ -152,3 +152,14 @@ TARGET_USES_QCOM_WCNSS_QMI := true
 
 # inherit from the proprietary version
 -include vendor/xiaomi/armani/BoardConfigVendor.mk
+
+# Bliss
+ARGET_TC_ROM := 4.8-sm
+TARGET_GCC_VERSION_EXP := $(TARGET_TC_ROM)
+
+# Kernel Toolchain
+KERNEL_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/$(HOST_OS)-x86/arm/arm-eabi-5.3/bin
+KERNEL_TOOLCHAIN_PREFIX := arm-eabi-
+
+#SaberMod
+-include vendor/bliss/config/sm.mk
